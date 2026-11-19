@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <form onsubmit="entrar(event)">
+            <input type="text" id="gmail" placeholder="Digite seu Gmail" required>
+            <input type="password" id="senha" placeholder="Digite sua senha" required>
+            <button type="submit">Entrar</button>
+            <div class="campo-senha">
+        
+            <button type="button" id="btn-olho" onclick="alternarSenha()">👁️</button>
+        </div>
+        </form>
+        
+
+        <p>
+            Não possui uma conta?
+            <a href="cadastro.html">Cadastre-se</a>
+        </p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

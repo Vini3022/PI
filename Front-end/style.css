@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  color: #1a1a1a;
+  min-height: 100vh;
+  padding: 0 0 40px 0;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: linear-gradient(90deg, #ffffff 0%, #fff0f3 100%);
+  border-bottom: 2px solid #ffe0e6;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(255, 56, 92, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ff385c;
+  cursor: pointer;
+}
+
+.container-pesquisa {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  max-width: 450px;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #ff385c;
+  border-radius: 25px;
+  padding: 6px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.barra-pesquisa:focus-within {
+  box-shadow: 0 0 0 3px rgba(255, 56, 92, 0.2);
+}
+
+.barra-pesquisa input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-busca {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menu-pilula {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 5px 8px 5px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.2s ease;
+}
+
+.menu-pilula:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #ff385c;
+}
+
+.icone-hamburguer {
+  font-size: 16px;
+  color: #222222;
+}
+
+.avatar-utilizador {
+  font-size: 18px;
+  background: #717171;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0 10px 0;
+  padding: 0 20px;
+}
+
+.cat-item {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  color: #4a5568;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cat-item:hover, .cat-item.ativo {
+  background: linear-gradient(135deg, #ff385c, #e00b41);
+  color: #ffffff;
+  border-color: #ff385c;
+  box-shadow: 0 6px 15px rgba(255, 56, 92, 0.35);
+  transform: translateY(-2px);
+}
+
+.conteudo-principal {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.titulo-secao {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.container-rolagem {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 28px;
+  padding: 10px 0;
+}
+
+.cartao-imovel {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem-cartao {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagem-cartao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.detalhes-cartao {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.nome-hotel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222222;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.localizacao {
+  color: #717171;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease;
+}
+
+.rodape-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+.preco {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ff385c;
+  transition: color 0.3s ease;
+}
+
+.avaliacao {
+  background: #fff0f3;
+  color: #ff385c;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cartao-imovel:hover {
+  background: #1e293b; 
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.35);
+  border-color: #334155;
+}
+
+.cartao-imovel:hover .imagem-cartao img {
+  transform: scale(1.08);
+}
+
+.cartao-imovel:hover .nome-hotel {
+  color: #ffffff;
+}
+
+.cartao-imovel:hover .localizacao {
+  color: #94a3b8;
+}
+
+.cartao-imovel:hover .preco {
+  color: #38bdf8; 
+}
+
+.cartao-imovel:hover .rodape-cartao {
+  border-top-color: #334155;
+}

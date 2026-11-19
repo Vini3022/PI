@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Hotel</title>
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body class="pagina-hotel">
+
+  <div class="container-hotel">
+    <div class="info-principal">
+      <div class="galeria-hotel">
+        <img id="imagem-hotel" src="" alt="Foto do Hotel">
+      </div>
+      <h1 id="nome-hotel">Carregando...</h1>
+      <p id="localizacao-hotel">📍 Localização</p>
+      <p><span id="avaliacao-hotel" class="avaliacao">★ 5.0</span></p>
+    </div>
+
+    <div class="cartao-reserva">
+  <div class="preco-cabecalho">
+    <span class="valor-diaria">R$ 1.250</span>
+    <span class="periodo">/ noite</span>
+  </div>
+
+  <form class="formulario-reserva">
+    <div class="campos-datas">
+      <div class="campo">
+        <label for="checkin">Check-in</label>
+        <input type="date" id="checkin" />
+      </div>
+      <div class="campo">
+        <label for="checkout">Check-out</label>
+        <input type="date" id="checkout" />
+      </div>
+    </div>
+
+    <div class="campo-hospedes">
+      <label for="hospedes">Hóspedes</label>
+      <select id="hospedes">
+        <option value="1">1 hóspede</option>
+        <option value="2">2 hóspedes</option>
+        <option value="3">3 hóspedes</option>
+      </select>
+    </div>
+
+    <button type="submit" class="botao-reservar">Confirmar Reserva</button>
+  </form>
+</div>
+  </div>
+
+  <script src="autenticacao.js"></script>
+  <script src="hotel.js"></script>
+</body>
+</html>
